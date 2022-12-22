@@ -38,8 +38,8 @@ Jinja2==3.1.2
 jmespath==1.0.1
 jsonschema==4.14.0
 jupyter-client==7.3.4
-jupyter-core==4.12
-jupyterlab-widgets==1.1.1
+jupyter-core==4.11.1
+jupyterlab-widgets==3.0.2
 keplergl==0.3.2
 kiwisolver==1.4.4
 mapbox==0.18.1
@@ -114,5 +114,4 @@ yarl==1.8.1
 zipp==3.8.1
 ipywidgets== 7.7.2
 ipykernel==6.15.1
-ipython==7.23.1
-
+ ipython==7.22.0
