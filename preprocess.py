@@ -16,6 +16,8 @@ def run(df):
     #Display the dataframe
     #Actual dataset had some discrepancy with column "trip_time_in_secs", 
     #so we have named it "trip_time_in_mins"
+
+    st.subheader("NEW YORK CITY TAXI DATA")
     st.subheader("Initial Dataset:")
     st.dataframe(df)
 
@@ -23,7 +25,7 @@ def run(df):
     #Rename the columns and remove any unnecessary characters from column names
     df.rename(columns = {'medallion':'ID'}, inplace = True)
     df.columns = df.columns.str.replace('[#,@,&, ]', '')    
-    df.drop(columns=[ 'hack_license', 'vendor_id', 'rate_code', 'store_and_fwd_flag', 'trip_time_in_secs', 'trip_distance'], axis=1, inplace=True)
+    df.drop(columns=[ 'hack_license', 'vendor_id', 'rate_code', 'store_and_fwd_flag', 'trip_time_in_mins', 'trip_distance'], axis=1, inplace=True)
     
     #Drop useless columns
     df['duration']=0
@@ -108,7 +110,7 @@ def run(df):
 
 
     #Since API call is expensive, Here we are taking only 20 trips. This number can be changed as per requirement
-    n=65
+    n=20
     for x in range(n):
         origin=str(df['pickup_latitude'][x]) + ',' + str(df['pickup_longitude'][x])
         destination=str(df['dropoff_latitude'][x]) + ',' + str(df['dropoff_longitude'][x])
@@ -119,12 +121,12 @@ def run(df):
         df['duration'][x]=mins
         df['distance'][x]=miles
         df['polyline'][x]= (polyline.decode(polyline_points))
-    df=df.to_csv('mydataset_1.csv',index=False)
+    df=df.to_csv('mydataset.csv',index=False)
 
 def lat_lon_conversion(dataFile):
     #Do some more processing. This function takes a lat-long list and separates lat and Lon of each trip
     df=pd.read_csv(dataFile)
-    n=65
+    n=20
     df = df.head(n)
 
     #Convert string to list
@@ -148,5 +150,3 @@ def lat_lon_conversion(dataFile):
     #Display the dataframe
     st.subheader("Dataset Prepared for the Application:")
     return df
-
-    

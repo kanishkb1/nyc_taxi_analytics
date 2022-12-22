@@ -6,6 +6,10 @@ import streamlit as st
 import plotly.express as px
 import pydeck as pdk
 import preprocess
+import warnings
+warnings.filterwarnings('ignore')
+#import other pytohn file functions
+from mystlib import explore
 
 #load dataset
 dataframe = pd.read_csv('dataset.csv')
@@ -27,9 +31,11 @@ with st.sidebar:
 preprocess.run(dataframe)
 
 #To store polyline latitudes and longitudes in separate lists, we are calling the lat_lon_conversion function
-df = preprocess.lat_lon_conversion("mydataset.csv")
+df = preprocess.lat_lon_conversion("readydataset.csv")
 
 
 #Display interactive dataframe
-st.dataframe(df)
+st.dataframe(dataframe)
 
+if page == 'View Data Using Dropdowns':
+    explore.run(dataframe)
