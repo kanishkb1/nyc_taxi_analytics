@@ -1,16 +1,17 @@
-import pandas as pd
 import streamlit as st
+import pandas as pd
 
-def run(dataframe):
+
+def run(df):
     st.title("Single-column Selection")
-    col = st.selectbox('Please select one column.',dataframe.columns)
-    st.write('You have selected',col)
-    st.write(dataframe[col].unique())
+    col = st.selectbox("Select one column:",df.columns)
+    st.write('You selected:', col)
+    st.write(df[col].unique())
 
+    st.title("Multi-column Selection")
 
-    st.title("Single-column Selection")
-    cols = st.multiselect('select column(s):', dataframe.columns, default = [])
-    st.write('You selected:', cols)
-    st.write(dataframe[cols])
+    cols = st.multiselect('Select column(s): ', df.columns,default=[])
+    st.write('You Selected:', cols)
 
+    st.write(df[cols])
 
