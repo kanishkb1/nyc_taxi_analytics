@@ -112,6 +112,6 @@ wcwidth==0.2.5
 widgetsnbextension==3.6.0
 yarl==1.8.1
 zipp==3.8.1
-ipywidgets== 1..0
-ipykernel==6.15.1
+ipywidgets== 8.0.2
+ipykernel==7.23.1
 ipython==7.23.1
