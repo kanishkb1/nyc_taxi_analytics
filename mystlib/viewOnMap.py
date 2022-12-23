@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.express as px
 def run(df):
     #Set mapbox token to allow plotting on map
-    px.set_mapbox_access_token('pk.eyJ1IjoibmlraXRhbWFuZGxpayIsImEiOiJjbGJ2Z285dTAwMnNjM3ByeGJxbXFwMWZzIn0.jGjBNwZ8WGGkIZM3UxrBcg')
+    px.set_mapbox_access_token('pk.eyJ1Ijoia2JhcmhhbjEiLCJhIjoiY2xieWtuc3VqMHhmZjNvbXExcHJsdGxvcSJ9.Fgyk3Nczo7dl1fygqOWibA')
 
     #PLOT # 1
     st.subheader("Plot # 01:")
