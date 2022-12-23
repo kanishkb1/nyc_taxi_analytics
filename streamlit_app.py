@@ -7,7 +7,6 @@ import pydeck as pdk
 
 from mystlib import viewOnMap
 
-import preprocess
 from mystlib import plot2D
 pd.options.mode.chained_assignment = None  # default='warn'
 
@@ -26,6 +25,7 @@ with st.sidebar:
         '2D Charts and Histograms', 
         '3D Charts and Histograms'])
 
+import preprocess
 
 #Preprocess the dataset
 preprocess.run(df)
