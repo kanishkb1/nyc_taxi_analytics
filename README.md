@@ -2,6 +2,9 @@
 
 Live Project Link :  <https://nyc-rkl1.onrender.com/>
 
+
+![alt text](https://github.com/kanishkb1/nyc_taxi_analytics/blob/a5ca56cd480269c4d2ecee34ffb4e39dfa4e1597/newplot.png)
+
 ## Project Description 
 
 * Developed an interactive dashboard based app using Streamlit (Python) for New York City Taxi dataset. 
