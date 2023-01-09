@@ -20,7 +20,6 @@ Live Project Link :  <https://nyc-rkl1.onrender.com/>
 * Numpy
 * Matplolib
 * Pandas
-* Flask
 * Streamlit
 * Pydeck
 * Plotly
@@ -30,7 +29,7 @@ Live Project Link :  <https://nyc-rkl1.onrender.com/>
 ## How to use ?
 
 * To run on terminal, launch the flask application by following command-
-`flask --app app run`
+`streamlit streamlit_app.py`
 
 * The launched app will start and navigate to a link. Open the link in browser (localhost).
 
